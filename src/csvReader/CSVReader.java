@@ -8,7 +8,15 @@ public class CSVReader	{
 	
 	}
 	
-
+	public String getCountryNames()	{
+			
+	}
 	
+	public getYearLabels()	{
+		
+	}
 	
+	public getParsedTable()	{
+		
+	}
 }
