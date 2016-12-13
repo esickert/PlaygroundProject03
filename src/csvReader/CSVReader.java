@@ -4,19 +4,23 @@ package csvReader;
 
 public class CSVReader	{
 	
+	protected String filename;
+	
 	CSVReader(String filename)	{
+		
+		this.filename = filename;
 	
 	}
 	
-	public String getCountryNames()	{
+	public void getCountryNames()	{
 			
 	}
 	
-	public getYearLabels()	{
+	public void getYearLabels()	{
 		
 	}
 	
-	public getParsedTable()	{
+	public void getParsedTable()	{
 		
 	}
 }
