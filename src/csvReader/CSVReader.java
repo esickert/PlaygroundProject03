@@ -7,20 +7,26 @@ public class CSVReader	{
 	protected String filename;
 	
 	CSVReader(String filename)	{
-		
 		this.filename = filename;
-	
 	}
 	
-	public void getCountryNames()	{
-			
+	public String[] getCountryNames()	{
+		String[] temp = {"0"};
+		return 	temp;
 	}
 	
-	public void getYearLabels()	{
-		
+	public int[] getYearLabels()	{
+		int[] temp = {0};
+		return temp;		
 	}
 	
-	public void getParsedTable()	{
-		
+	public double[][] getParsedTable()	{
+		double[][] temp = {{0.0,0.0},{0.0,0.0}};
+		return temp;		
+	}
+	
+	public int getNumberOfYears()	{
+		int temp = 0;
+		return temp;
 	}
 }

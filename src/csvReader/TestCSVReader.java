@@ -37,7 +37,7 @@ public class TestCSVReader
 		CellularData datatable;
 		int numRows = parsedTable.length;
 		int numColumns = parser.getNumberOfYears();
-		int startingYear = yearLabels[0];
+		int startingYear = yearLabels[0];  //NOTE THIS IS A SINGLE ARRAY.
 
 		datatable = new CellularData(numRows, numColumns, startingYear);
 
