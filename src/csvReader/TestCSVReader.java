@@ -25,11 +25,11 @@ public class TestCSVReader
 		//       The constructor should fill the array of country names, year labels, etc.
 		// NOTE: Handle all exceptions in the constructor.
 		//       For full credit, do *not* throw exceptions to main. 
-		CSVReader parser = new CSVReader(FILENAME);   //PARSER IS AN INSTANCE OF CVSREADER!!!!!!!!!!!!!!!!!!!!!!!!
+		CSVReader parser = new CSVReader(FILENAME);   //PARSER IS AN INSTANCE OF class CVSREADER!!!!!!!!!!!!!!!!!!!!!!!!
 
-		// TODO: In class CSVReader the accessor methds should only return values
-		//       at instance variables.
-		String [] countryNames = parser.getCountryNames();
+		// TODO: In class CSVReader the accessor methods should only return values
+		//       at(of) instance variables.
+		String [] countryNames = parser.getCountryNames();    //parser is an instance of class CVSReader
 		int [] yearLabels = parser.getYearLabels();
 		double [][] parsedTable = parser.getParsedTable();		
 
