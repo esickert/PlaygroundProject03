@@ -1,10 +1,9 @@
 package csvReader;
 
-
-
 public class CSVReader	{
 	
 	protected String filename;
+	
 	
 	CSVReader(String filename)	{
 		this.filename = filename;
