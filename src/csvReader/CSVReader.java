@@ -1,8 +1,12 @@
 package csvReader;
 
+import java.util.*;
+import java.io.*;
+
 public class CSVReader	{
 	
 	protected String filename;
+	public static final String HI = "hello"; //NOTE that i can add the constant here but not under main(). This has nothing to do with this assignment. Figure this out!!!
 	
 	
 	CSVReader(String filename)	{
