@@ -7,7 +7,7 @@ package csvReader;
  */
 public class TestCSVReader
 {
-
+	public static final String HI = "hello"; //this is a 
 	/**
 	 * Uses a CSVReader to parse a CSV file.
 	 * Adds each parsed line to an instance of the CellularData class.
