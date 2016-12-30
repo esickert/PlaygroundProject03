@@ -9,7 +9,7 @@ public class CSVReader	{
 	
 	CSVReader(String filename)	{
 		this.filename = filename;
-		System.out.println("This is just the path statement: " + filename);
+		System.out.println("This is just the path statement: " + filename + "\n");
 	}
 	
 	//************************************************************************

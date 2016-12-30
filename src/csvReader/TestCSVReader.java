@@ -16,8 +16,8 @@ public class TestCSVReader
 		// NOTE: Make sure to use relative path instead of specifying the entire path 
 		// (such as /Users/alicew/myworkspace/so_on_and_so_forth).
 //		final String FILENAME = "resources/cellular.csv";	// Directory path for Mac OS X
-		final String FILENAME = "resources\\cellular.csv";	// Directory path for Windows OS (i.e. Operating System) ISSUE WITH BACKWARD SLASH IN STRINGS.
-
+//		final String FILENAME = "resources\\cellular.csv";	// Directory path for Windows OS (i.e. Operating System) ISSUE WITH BACKWARD SLASH IN STRINGS.
+		final String FILENAME = "resources\\cellular_short_oneDecade.csv";             //MYSTUFF
 		// TODO: Create the class CSVReader to parse the CSV data file
 		//       The class constructor should only take a string as argument
 		//       for the name of the input file.
@@ -25,12 +25,12 @@ public class TestCSVReader
 		// NOTE: Handle all exceptions in the constructor.
 		//       For full credit, do *not* throw exceptions to main. 
 		CSVReader parser = new CSVReader(FILENAME);   //PARSER IS AN INSTANCE OF class CVSREADER!!!!!!!!!!!!!!!!!!!!!!!!
-		parser.importFile;  //MYSTUFF
+		parser.importFile();  //MYSTUFF
 
 		// TODO: In class CSVReader the accessor methods should only return values
 		//       at(of) instance variables.
 		String [] countryNames = parser.getCountryNames();    //parser is an instance of class CVSReader
-		System.out.println("This is just testing ... " + countryNames[0]);                            //MYSTUFF - delete when finished
+		System.out.println("\nThis is just testing ... got the external file inside the app " + countryNames[0]);                            //MYSTUFF - delete when finished
 		int [] yearLabels = parser.getYearLabels();
 		double [][] parsedTable = parser.getParsedTable();		
 
