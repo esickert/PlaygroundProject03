@@ -9,6 +9,7 @@ public class CSVReader	{
 	
 	CSVReader(String filename)	{
 		this.filename = filename;
+		System.out.println("This is the path statement " + filename);
 	}
 	
 	public String[] getCountryNames()	{
