@@ -7,7 +7,6 @@ package csvReader;
  */
 public class TestCSVReader
 {
-	public static final String HI = "hello"; //this is a 
 	/**
 	 * Uses a CSVReader to parse a CSV file.
 	 * Adds each parsed line to an instance of the CellularData class.
@@ -30,6 +29,7 @@ public class TestCSVReader
 		// TODO: In class CSVReader the accessor methods should only return values
 		//       at(of) instance variables.
 		String [] countryNames = parser.getCountryNames();    //parser is an instance of class CVSReader
+		System.out.println("This is just testing ... " + countryNames[0]);                            //MYSTUFF - delete when finished
 		int [] yearLabels = parser.getYearLabels();
 		double [][] parsedTable = parser.getParsedTable();		
 
@@ -43,23 +43,24 @@ public class TestCSVReader
 
 		// From the array that stores parsed information,
 		// add one country at a time to an object of type CellularData.
-		for (int countryIndex = 0; countryIndex < countryNames.length; countryIndex++)
+		for (int countryIndex = 0; countryIndex < countryNames.length-1; countryIndex++)	//ADDED -1 TO COUNTRYNAMES.LENGTH
 		{
 			double [] countryData = parsedTable[countryIndex];
-			datatable.addCountry(countryNames[countryIndex], countryData);					
-		}
+			datatable.addCountry(countryNames[countryIndex], countryData);
+			
+		}  
 
 
-		System.out.printf(countryNames[14] + " (1960 to 2014): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[0],1960,2014));
+//		System.out.printf(countryNames[14] + " (1960 to 2014): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[0],1960,2014));  //14 is an index!!!!!!!!!!!!!!
 		// the output is: 
 		// Bahamas, The (1960 to 2014): 420.07
 
-		System.out.printf(countryNames[100] + " (1950 to 2000): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[100],1950,2000));
+//		System.out.printf(countryNames[100] + " (1950 to 2000): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[100],1950,2000));   //100 is an index
 		// the output is: 
 		// ERROR : requested year 1950  is less than 1960
 		// Hong Kong SAR, China (1950 to 2000): -1.00 
 
-		System.out.printf(countryNames[251] + " (1980 to 2014): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[200],1980,2014));
+//		System.out.printf(countryNames[251] + " (1980 to 2014): %.2f \n", datatable.getNumSubscriptionsInCountryForPeriod(countryNames[200],1980,2014));  //251 is an index
 		// the output is: 
 		// United States (1980 to 2014): 296.41
 
