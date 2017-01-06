@@ -21,40 +21,46 @@ public class CSVReader	{
 	    
 	    try {
 
-	        Scanner sc = new Scanner(file);
+	        Scanner inputStream = new Scanner(file);
 //	        int lineNumber = 0;
-//	        while (sc.hasNextLine()) {
-	        while (((filename = sc.nextLine()) != null) && ((sc.hasNextLine())))	{   //GERMANY IS MISSING FROM THIS OUTPUT--LAST INPUT LINE
-//	        	lineNumber++;
+
+	        
+	        while (((filename = inputStream.nextLine()) != null)){ //|| (inputStream.hasNextLine()))	{   //GERMANY IS MISSING FROM THIS OUTPUT--LAST INPUT LINE
+//	           	System.out.println(inputStream.hasNextLine());  //this is true because germany is still left!!!!
 	        	result = filename.split(",");
-	        	for (int x=0; x < result.length; x++) {             //tis needs to be a 2 dimensional array!!!
-                    System.out.print(result[x] + ", ");
-                
-	        	}
-	        	System.out.print("\n");
+	        	
+	        	forRecussion(0);  //	THIS IS A RECUSSIVE CALL TO PRINT OUT THE TABLE.
+//	        	for (int x=0; x < result.length; x++) {             //this needs to be a 2 dimensional array!!!
+//                    System.out.print(result[x] + ", ");
+//                } 
+	        	System.out.print(".......Missing Germany???\n");
 //	            String i = sc.nextLine(); //this stores one line of input, then prints it.
 	            
 //	            System.out.println(i);
+//	        	lineNumber++;
 	        }
-	        sc.close();  //this just closes Scanner sc 
+	        inputStream.close();  //this just closes Scanner sc 
 	        } 
 	    catch (FileNotFoundException e) {
 	        e.printStackTrace();
 	    }
-//	    for(int i = 0; i < result.length - 1; i++)	{
-//	    	System.out.println(result[5]);
-//	    } 
-	    
 	}
 
 	public void printArray()	{
-		System.out.println();
+		System.out.println("\nThis prints out the last entry in the array using recussion");
 		for(int i = 0; i < result.length; i++) {
 		System.out.print(result[i] + ", ");
 		}
 		System.out.println();
-		
 	}
+	
+	public int forRecussion(int i)	{
+    	if (i == result.length)	
+    		return i;
+    	else 
+    		System.out.print(result[i] + ", ");
+    		return forRecussion(i + 1);
+    }
 	
 
 	//********************************************************************* 	
