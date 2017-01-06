@@ -27,6 +27,7 @@ public class CSVReader	{
 	        
 	        while (((filename = inputStream.nextLine()) != null)){ //|| (inputStream.hasNextLine()))	{   //GERMANY IS MISSING FROM THIS OUTPUT--LAST INPUT LINE
 //	           	System.out.println(inputStream.hasNextLine());  //this is true because germany is still left!!!!
+
 	        	result = filename.split(",");
 	        	
 	        	forRecussion(0);  //	THIS IS A RECUSSIVE CALL TO PRINT OUT THE TABLE.
