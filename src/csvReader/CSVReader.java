@@ -48,7 +48,7 @@ public class CSVReader	{
 	        System.out.print(result[i] + " ");
 	    }
 //	    forRecussion(0);  this is throwing a null pointer exception. Final return type incorrect??
-	    System.out.println("This is result index 4" + result[4]);
+	    System.out.println("\nThis is the result of index 4: " + result[4] + " of the country " + result[0]);
 	}
 //*************************************************************************	
 	public String[] forRecussion(int i)	{
