@@ -6,9 +6,9 @@ import java.io.*;
 public class CSVReader	{
 	
 	protected String filename;
-	String[][] result;
+	String[] resultArray;
 	
-	CSVReader(String filename)	{
+	CSVReader(String filename)	{    //class constructor takes outside file as input
 		this.filename = filename;
 		System.out.println("This is just the path statement: " + filename + "\n");
 	}
@@ -16,12 +16,9 @@ public class CSVReader	{
 	//************************************************************************
 	public void importFile() { 
 	 
-//	    final String ADDRESS = "c:\\Temp\\ReadFromFileStuff\\cellular_short_oneDecade.csv";
 	    File file = new File(filename);  //note the double backslashes for windows
 	 
 	    String[] result = null;
-	    
-//	    AndMore.printMe();  //passing of a static method
 	    
 	    try {
 
@@ -29,14 +26,14 @@ public class CSVReader	{
 
 	       while (sc.hasNextLine()) {
 
-	           String str = sc.nextLine(); //this stores one line of input, then prints it.
+	           String str = sc.nextLine(); //this stores one line of the input file.
 
-	           String[] resultArray = str.split(",");
+	           String[] resultArray = str.split(",");  //SO THIS STORES THE SPLIT INPUT LINE!!!!!!!!!!1
 	           for(int i = 0; i <= resultArray.length - 1; i++)    {
-	               System.out.print(resultArray[i] + " ");  //It's the fucking input causing the errors!!
+	               System.out.print(resultArray[i] + " ");  
 	            }
 	            System.out.println();
-	            result = resultArray;
+	            result = resultArray;  //i think there is alot of redundancy here. this is in the while loop. THIS IS FUCKED UP!!!!!!!!!!!!!!!!!!!!!!
 	        }  //end of while
 	        sc.close();
 	        
@@ -44,30 +41,24 @@ public class CSVReader	{
 	    catch (FileNotFoundException e) {
 	        e.printStackTrace();
 	    }//end of catch
+	    System.out.println("\nThis is testing the array....Germany is the last loaded...it over writes previous");
 	    for(int i = 0; i <= result.length - 1; i++)    {
 	        System.out.print(result[i] + " ");
 	    }
-//	    forRecussion(0);  this is throwing a null pointer exception. Final return type incorrect??
-	    System.out.println("\nThis is the result of index 4: " + result[4] + " of the country " + result[0]);
+	    System.out.println();
+
+//	    System.out.println("\nThis is the result of index 4: " + resultArray[4] + " of the country " + resultArray[0]);  //THIS THROWS A NULL POINTER EXCEPTION. I THINK THE ARRAY IS OUT OF BOUNDS.
 	}
 //*************************************************************************	
-	public String[] forRecussion(int i)	{
-    	if (i == result.length-1)	
-    		return result[i];
-    	else 
-    		System.out.print(result[i] + ", ");
-    		return forRecussion(i + 1);
-    }
-
-	//********************************************************************* 	
-	public String[] getCountryNames()	{
-		String[] temp = {"England"};
-		return 	temp;
+	
+	public String[] getCountryNames()	{    //String [] countryNames = parser.getCountryNames(); 
+		String[] CountryName = {"England"};
+		return 	CountryName;
 	}
 	
 	public int[] getYearLabels()	{
-		int[] temp = {0};
-		return temp;		
+		int[] yearLabels = {0};
+		return yearLabels;		
 	}
 	
 	public double[][] getParsedTable()	{
@@ -76,7 +67,7 @@ public class CSVReader	{
 	}
 	
 	public int getNumberOfYears()	{
-		int temp = 0;
-		return temp;
+		int years = 0;
+		return years;
 	}
 }
