@@ -30,7 +30,6 @@ public class TestCSVReader
 		// TODO: In class CSVReader the accessor methods should only return values
 		//       at(of) instance variables.
 		String [] countryNames = parser.getCountryNames();    //parser is an instance of class CVSReader
-		System.out.println("\nThis is just testing ... got the external file inside the app " + countryNames[0]);                            //MYSTUFF - delete when finished
 		int [] yearLabels = parser.getYearLabels();
 		double [][] parsedTable = parser.getParsedTable();		
 

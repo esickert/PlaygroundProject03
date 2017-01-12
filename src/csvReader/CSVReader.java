@@ -24,8 +24,8 @@ public class CSVReader	{
 
 	        Scanner sc = new Scanner(file);
 
-	       while (sc.hasNextLine()) {
-
+//	       while (sc.hasNextLine()) {
+	       for(int x = 0; x <= 1; x++)	{              //this allows me to see the output at each set of the loop
 	           String str = sc.nextLine(); //this stores one line of the input file.
 
 	           String[] resultArray = str.split(",");  //SO THIS STORES THE SPLIT INPUT LINE!!!!!!!!!!1
@@ -34,7 +34,7 @@ public class CSVReader	{
 	            }
 	            System.out.println();
 	            result = resultArray;  //i think there is alot of redundancy here. this is in the while loop. THIS IS FUCKED UP!!!!!!!!!!!!!!!!!!!!!!
-	        }  //end of while
+	        }  //end of while  **********************************************
 	        sc.close();
 	        
 	    } //end of try
