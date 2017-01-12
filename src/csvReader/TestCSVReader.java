@@ -18,6 +18,7 @@ public class TestCSVReader
 //		final String FILENAME = "resources/cellular.csv";	// Directory path for Mac OS X
 //		final String FILENAME = "resources\\cellular.csv";	// Directory path for Windows OS (i.e. Operating System) ISSUE WITH BACKWARD SLASH IN STRINGS.
 		final String FILENAME = "resources\\cellular_short_oneDecade.csv";             //MYSTUFF
+//		final String FILENAME = "resources\\test.csv";
 		// TODO: Create the class CSVReader to parse the CSV data file
 		//       The class constructor should only take a string as argument
 		//       for the name of the input file.
@@ -25,7 +26,7 @@ public class TestCSVReader
 		// NOTE: Handle all exceptions in the constructor.
 		//       For full credit, do *not* throw exceptions to main. 
 		CSVReader parser = new CSVReader(FILENAME);   //PARSER IS AN INSTANCE OF class CVSREADER!!!!!!!!!!!!!!!!!!!!!!!!
-		parser.importFile();  //MYSTUFF***************************************************************
+		parser.importFile();  //MYSTUFF***************************************************************DELETE WHEN FINISHED
 		// TODO: In class CSVReader the accessor methods should only return values
 		//       at(of) instance variables.
 		String [] countryNames = parser.getCountryNames();    //parser is an instance of class CVSReader
@@ -35,12 +36,13 @@ public class TestCSVReader
 
 		// Stores the 2D array of cellular data for all countries.
 		CellularData datatable;
+		
 		int numRows = parsedTable.length;
 		int numColumns = parser.getNumberOfYears();
 		int startingYear = yearLabels[0];  //NOTE THIS IS A SINGLE ARRAY.
 
 		datatable = new CellularData(numRows, numColumns, startingYear);
-
+//		System.out.println(datatable);                                                                                                      //MYSTUFF - DELETE WHEN FINISHED
 		// From the array that stores parsed information,
 		// add one country at a time to an object of type CellularData.
 		for (int countryIndex = 0; countryIndex < countryNames.length-1; countryIndex++)	//ADDED -1 TO COUNTRYNAMES.LENGTH
