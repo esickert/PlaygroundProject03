@@ -25,8 +25,8 @@ public class CSVReader	{
 
 	        Scanner sc = new Scanner(file);
 
-	       while (sc.hasNextLine()) {
-//	       for(int x = 0; x <= 1; x++)	{              //this allows me to see the output at each set of the loop
+//	       while (sc.hasNextLine()) {
+	       for(int x = 0; x <= 1; x++)	{              //this allows me to see the output at each set of the loop
 	           String str = sc.nextLine(); //this stores one line of the input file.
 	          
 	           String[] resultArray = str.split(",");  //SO THIS STORES THE SPLIT INPUT LINE!!!!!!!!!!1
