@@ -33,7 +33,7 @@ public class CSVReader	{
 	           for(int i = 0; i <= resultArray.length - 1; i++)    {
 	               System.out.print(resultArray[i] + " ");  
 	            }
-	            System.out.println();
+	            System.out.println("\nThis is the last country entered: " + resultArray[0]);
 	            result = resultArray;                                        //i think there is alot of redundancy here. this is in the while loop. THIS IS FUCKED UP!!!!!!!!!!!!!!!!!!!!!!
 	            
 	            
@@ -44,7 +44,7 @@ public class CSVReader	{
 	    catch (FileNotFoundException e) {
 	        e.printStackTrace();
 	    }//end of catch
-	    System.out.println("\nThis is testing the array....Germany is the last loaded...it over writes previous entries");
+	    System.out.println("\nThis is testing the array...." + result[0] + " is the last loaded...it over writes previous entries");
 	    for(int i = 0; i <= result.length - 1; i++)    {
 	        System.out.print(result[i] + " ");
 	    }
