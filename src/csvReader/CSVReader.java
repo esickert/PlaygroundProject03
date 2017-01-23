@@ -26,7 +26,7 @@ public class CSVReader	{
 	        Scanner sc = new Scanner(file);
 
 //	       while (sc.hasNextLine()) {
-	       for(int x = 0; x <= 1; x++)	{              //this allows me to see the output at each set of the loop
+	       for(int x = 0; x <= 5; x++)	{              //this allows me to see the output at each set of the loop
 	           String str = sc.nextLine(); //this stores one line of the input file.
 	          
 	           String[] resultArray = str.split(",");  //SO THIS STORES THE SPLIT INPUT LINE!!!!!!!!!!1
@@ -44,7 +44,7 @@ public class CSVReader	{
 	    catch (FileNotFoundException e) {
 	        e.printStackTrace();
 	    }//end of catch
-	    System.out.println("\nThis is testing the array....Germany is the last loaded...it over writes previous");
+	    System.out.println("\nThis is testing the array....Germany is the last loaded...it over writes previous entries");
 	    for(int i = 0; i <= result.length - 1; i++)    {
 	        System.out.print(result[i] + " ");
 	    }
