@@ -66,6 +66,7 @@ public class CSVReader	{
 	
 	public double[][] getParsedTable()	{
 		double[][] temp = {{0.0,0.0},{0.0,0.0}};
+		
 		return temp;		
 	}
 	
