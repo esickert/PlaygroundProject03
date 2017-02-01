@@ -26,7 +26,7 @@ public class TestCSVReader
 		// NOTE: Handle all exceptions in the constructor.
 		//       For full credit, do *not* throw exceptions to main. 
 		CSVReader parser = new CSVReader(FILENAME);   //PARSER IS AN INSTANCE OF class CVSREADER!!!!!!!!!!!!!!!!!!!!!!!!
-		parser.importFile();  //MYSTUFF***************************************************************DELETE WHEN FINISHED
+		parser.importFile();  //MYSTUFF***************************************************************DELETE WHEN FINISHED**************MYSTUFF
 		// TODO: In class CSVReader the accessor methods should only return values
 		//       at(of) instance variables.
 		String [] countryNames = parser.getCountryNames();    //parser is an instance of class CVSReader
