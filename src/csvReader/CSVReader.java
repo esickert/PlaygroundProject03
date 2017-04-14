@@ -3,6 +3,8 @@ package csvReader;
 import java.util.*;
 import java.io.*;
 
+//import org.junit.*;
+
 public class CSVReader	{
 	
 	protected String filename;
@@ -14,7 +16,8 @@ public class CSVReader	{
 	}
 	
 	//************************************************************************
-	public void importFile()   {
+//	@Test
+	public void importFile() {
 	 
 	    File file = new File(filename);  //note the double backslashes for windows
 	 
@@ -33,11 +36,11 @@ public class CSVReader	{
 	          
 	           String[] resultArray = str.split(",");                        //SO THIS STORES THE SPLIT INPUT LINE
 	           for(int i = 0; i <= resultArray.length - 1; i++)    {
-	               System.out.print(resultArray[i] + " ");  
+	               System.out.print(resultArray[i] + "\t");  
 	            }
 	            System.out.println();
 	            
-	            result = resultArray;                                        
+//	            result = resultArray;                                        
 	       }  //end of for loop 
 	            
 	       }  //end of while  **********************************************
@@ -49,9 +52,9 @@ public class CSVReader	{
 	    }//end of catch
 	    
 //	    System.out.println("\nThis is testing the array...." + result[0] + " is the last loaded...it overwrites previous entries");
-	    for(int i = 0; i <= result.length - 1; i++)    {
-	        System.out.print(result[i] + " ");
-	    }
+//	    for(int i = 0; i <= result.length - 1; i++)    {
+//	        System.out.print(result[i] + " ");
+//	    }
 	    System.out.println("\n");
 	    
 //	    
