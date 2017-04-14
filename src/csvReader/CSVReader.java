@@ -21,7 +21,7 @@ public class CSVReader	{
 	 
 	    File file = new File(filename);  //note the double backslashes for windows
 	 
-	    String[]result = null;
+//	    String[]result = null;
 	    
 	    
 	    
