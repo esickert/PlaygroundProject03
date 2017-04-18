@@ -6,7 +6,7 @@ import java.io.*;
 
 //import org.junit.*;
 
-public class CSVReader	{
+public class CSVReader {
 	
 	private static DecimalFormat decimalPlaces = new DecimalFormat("##.##");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
 	private int numRows;  //???????????????????????? IS THIS BEING USED??????? 
@@ -26,7 +26,7 @@ public class CSVReader	{
 		this.filename = filename;
 		System.out.println("This is just the path statement: " + filename + "\n");
 	}
-	
+
 	//************************************************************************
 
 	public void importFile() 	{
