@@ -1,11 +1,23 @@
 package csvReader;
 
+import java.text.DecimalFormat;
 import java.util.*;
 import java.io.*;
 
 //import org.junit.*;
 
 public class CSVReader	{
+	
+	private static DecimalFormat decimalPlaces = new DecimalFormat("##.##");  //THIS SETS THE NUMBER OF PLACES TO THE RIGHT OF THE DECIMAL POINT.
+	private int numRows;  //???????????????????????? IS THIS BEING USED??????? 
+	
+	//these are fields because they are variables of the class not methods
+	private int numColumns;
+	private int startingYear;
+	private int countryIndex = 1; //???????????????? HOW IS THIS BEING USED????????
+	private int firstYear;
+	private int lastYear;
+	private String[][] anArray;   //CHANGED THE ARRAY FROM OBJECT TO STRING. CONVERT THE STRINGS TO INTEGERS
 	
 	protected String filename;
 	String[] resultArray;
@@ -16,15 +28,15 @@ public class CSVReader	{
 	}
 	
 	//************************************************************************
-//	@Test
-	public void importFile() {
+
+	public void importFile() 	{
 	 
 	    File file = new File(filename);  //note the double backslashes for windows
 	 
 //	    String[]result = null;
 	    
 	    
-	    
+	    int numRows = 0;
 	    try {
 
 	        Scanner sc = new Scanner(file);
@@ -51,17 +63,12 @@ public class CSVReader	{
 	        e.printStackTrace();
 	    }//end of catch
 	    
-//	    System.out.println("\nThis is testing the array...." + result[0] + " is the last loaded...it overwrites previous entries");
-//	    for(int i = 0; i <= result.length - 1; i++)    {
-//	        System.out.print(result[i] + " ");
-//	    }
+
 	    System.out.println("\n");
-	    
-//	    
 	}  //end of importFile() 
 //*************************************************************************	
 	
-	public String[] getCountryNames()	{    //String [] countryNames = parser.getCountryNames(); 
+/*	public String[] getCountryNames()	{    //String [] countryNames = parser.getCountryNames(); 
 		String[] CountryName = {"England"};
 		return 	CountryName;
 	}
@@ -80,5 +87,5 @@ public class CSVReader	{
 	public int getNumberOfYears()	{
 		int years = 0;
 		return years;
-	}
+	} */
 }
