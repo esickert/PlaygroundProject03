@@ -39,12 +39,12 @@ public class CSVReader {
 	    int numRows = 0;
 	    try {
 
-	        Scanner sc = new Scanner(file);
+	        Scanner scanIn = new Scanner(file);
 
-	       while (sc.hasNextLine()) {
+	       while (scanIn.hasNextLine()) {
 	      
 	       for(int x =0; x <= 5; x++)	{                                    //this allows me to see the output at each set of the loop
-	           String str = sc.nextLine();                                   //this stores one line of the input file.
+	           String str = scanIn.nextLine();                                   //this stores one line of the input file.
 	          
 	           String[] resultArray = str.split(",");                        //SO THIS STORES THE SPLIT INPUT LINE
 	           for(int i = 0; i <= resultArray.length - 1; i++)    {
@@ -56,7 +56,7 @@ public class CSVReader {
 	       }  //end of for loop 
 	            
 	       }  //end of while  **********************************************
-	        sc.close();
+	        scanIn.close();
 	        
 	    } //end of try
 	    catch (FileNotFoundException e) {
