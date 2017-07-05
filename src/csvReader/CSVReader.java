@@ -48,7 +48,7 @@ public class CSVReader {
 	          
 	           String[] resultArray = str.split(",");                        //SO THIS STORES THE SPLIT INPUT LINE
 	           for(int i = 0; i <= resultArray.length - 1; i++)    {
-//	        	   for(int j; j <= anArray[numOfRows][j]
+//	        	   for(int j; j <= anArray[numOfRows][j]; j++)	{
 	               System.out.print(resultArray[i] + "\t");  
 	            }
 	            System.out.println();
