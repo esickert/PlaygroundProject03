@@ -53,7 +53,7 @@ public class CSVReader {
 	            }
 	            System.out.println();
 	            
-	            result = resultArray;                                        
+//	            result = resultArray;                                        
 	       }  //end of for loop 
 	            
 	       }  //end of while  **********************************************
